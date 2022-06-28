@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="493.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+	<children>
+		<TabPane prefHeight="493.0" prefWidth="667.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="Modalidades">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="263.0" prefWidth="499.0">
+							<children>
+								<TextField fx:id="tfModalidadeId" layoutX="37.0" layoutY="60.0" prefHeight="25.0" prefWidth="60.0" promptText="Id" />
+								<TextField fx:id="tfModalidadeNome" layoutX="37.0" layoutY="120.0" prefHeight="26.0" prefWidth="459.0" promptText="Nome" />
+								<TextField fx:id="tfModalidadeDescricao" layoutX="37.0" layoutY="180.0" prefHeight="58.0" prefWidth="459.0" promptText="Descricao" />
+								<Button fx:id="btnModalidadeInserir" layoutX="37.0" layoutY="274.0" mnemonicParsing="false" onAction="#acaoModalidade" text="Inserir" />
+								<Button fx:id="btnModalidadeAtualizar" layoutX="367.0" layoutY="274.0" mnemonicParsing="false" onAction="#acaoModalidade" text="Atualizar" />
+								<Button fx:id="btnModalidadeExcluir" layoutX="171.0" layoutY="274.0" mnemonicParsing="false" onAction="#acaoModalidade" text="Excluir" />
+								<Button fx:id="btnModalidadeListar" layoutX="538.0" layoutY="274.0" mnemonicParsing="false" onAction="#acaoModalidade" text="Listar" />
+								<Button fx:id="btnModalidadeBuscar" layoutX="145.0" layoutY="56.0" mnemonicParsing="false" onAction="#acaoModalidade" text="Buscar" />
+								<ScrollPane layoutX="37.0" layoutY="344.0">
+									<content>
+      										<TextArea fx:id="taModalidadeLista" prefHeight="97.0" prefWidth="543.0" />
+									</content>
+								</ScrollPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Alunos">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<TextField fx:id="tfAlunoId" layoutX="37.0" layoutY="56.0" prefHeight="25.0" prefWidth="60.0" promptText="Id" />
+								<TextField fx:id="tfAlunoNome" layoutX="37.0" layoutY="117.0" prefHeight="26.0" prefWidth="459.0" promptText="Nome" />
+								<TextField fx:id="tfAlunoEmail" layoutX="37.0" layoutY="176.0" prefHeight="26.0" prefWidth="459.0" promptText="E-mail" />
+								<TextField fx:id="tfAlunoPlano" layoutX="37.0" layoutY="232.0" promptText="Plano" />
+								<Button fx:id="btnAlunoInserir" layoutX="37.0" layoutY="289.0" mnemonicParsing="false" onAction="#acaoAluno" text="Inserir" />
+								<Button fx:id="btnAlunoAtualizar" layoutX="196.0" layoutY="289.0" mnemonicParsing="false" onAction="#acaoAluno" text="Atualizar" />
+								<Button fx:id="btnAlunoExcluir" layoutX="383.0" layoutY="289.0" mnemonicParsing="false" onAction="#acaoAluno" text="Excluir" />
+								<Button fx:id="btnAlunoListar" layoutX="541.0" layoutY="289.0" mnemonicParsing="false" onAction="#acaoAluno" text="Listar" />
+								<Button fx:id="btnAlunoBuscar" layoutX="145.0" layoutY="56.0" mnemonicParsing="false" onAction="#acaoAluno" text="Buscar" />
+								<TextField fx:id="tfAlunoModalidade" layoutX="259.0" layoutY="232.0" promptText="Modalidade" />
+								<ScrollPane layoutX="37.0" layoutY="380.0">
+									<content>
+										<TextArea fx:id="taAlunoLista" prefHeight="72.0" prefWidth="546.0" />
+									</content>
+								</ScrollPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</children>
+</AnchorPane>
