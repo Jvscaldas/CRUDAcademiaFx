@@ -16,19 +16,19 @@ public class Aluno {
 	@Column(name = "id_aluno")
 	@NotNull
 	private int id;
-	
+
 	@Column(name = "nome_aluno", length = 100)
 	@NotNull
 	private String nome;
-	
+
 	@Column(name = "email_aluno", length = 60)
 	@NotNull
 	private String email;
-	
+
 	@Column(name = "plano_aluno", length = 60)
 	@NotNull
 	private String plano;
-	
+
 	@ManyToOne(targetEntity = Modalidade.class)
 	@JoinColumn(name = "id_modalidade")
 	@NotNull
